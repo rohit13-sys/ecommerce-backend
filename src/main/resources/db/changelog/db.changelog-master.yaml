@@ -1,3 +1,11 @@
 databaseChangeLog:
   - include:
+      file: classpath:/db/changelog/changes/create-table.sql
+
+  - include:
+      file: classpath:/db/changelog/changes/refresh-database-with-4-categories.sql
+
+  - include:
       file: classpath:/db/changelog/changes/001-product.sql
+
+
