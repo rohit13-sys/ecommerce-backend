@@ -1,10 +1,10 @@
 package com.practice.ecommercebackend.entity;
 
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.rest.core.config.Projection;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -12,9 +12,9 @@ import java.util.Set;
 @Setter @Getter
 @NoArgsConstructor @AllArgsConstructor
 public class Category extends BaseEntity{
+
     private String categoryName;
 
     @OneToMany
     private Set<Product> products;
-
 }
