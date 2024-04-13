@@ -12,5 +12,5 @@ public interface ProductRepository extends BaseRepository<Product> {
 
     Page<Product> findByCategoryId(@Param("id") String categoryId, Pageable pageable);
 
-    Page<Product> findByNameContaining(@Param("name") String name,Pageable pageable);
+    Page<Product> findByNameContainingIgnoreCase(@Param("name") String name,Pageable pageable);
 }
