@@ -17,3 +17,12 @@ spring:
     change-log: classpath:db/changelog/db.changelog-master.yaml
   data:
     rest.base-path: /api
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
